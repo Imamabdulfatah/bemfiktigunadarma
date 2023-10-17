@@ -22,50 +22,32 @@ class DatabaseSeeder extends Seeder
        
 
         User::create([
-            'name' => 'BEM Fikti UG',
-            'username' => 'BEM FIKTI 2022/2023',
+            'nama' => 'BEM Fikti UG',
             'email' => 'bemfikti@gmail.com',
-            'npm' => '20121592',
-            'class' => 'Umum',
+            'nidn' => '20121592',
             'is_admin' => '1',
             'password' => bcrypt('BemFikti2022-2023sukses')
         ]);
 
         
         User::create([
-            'name' => 'Creator1',
-            'username' => 'Creator Utama 2022/2023',
+            'nama' => 'Creator1',
             'email' => 'creator1@gmail.com',
-            'npm' => '20121592',
-            'class' => 'Umum',
+            'nidn' => '20121592',
             'password' => bcrypt('Creator1Kreatif')
         ]);
 
         User::create([
-            'name' => 'Creator2',
-            'username' => 'Creator Kedua 2022/2023',
+            'nama' => 'Creator2',
             'email' => 'creator2@gmail.com',
-            'npm' => '20121592',
-            'class' => 'Umum',
+            'nidn' => '20121592',
             'password' => bcrypt('Creator2Inovatif')
         ]);
 
-        
         User::create([
-            'name' => 'Creator3',
-            'username' => 'Creator Ketiga 2022/2023',
-            'email' => 'creator3@gmail.com',
-            'npm' => '20121592',
-            'class' => 'Umum',
-            'password' => bcrypt('Creator3Praktis')
-        ]);
-
-        User::create([
-            'name' => 'Admin Pemira',
-            'username' => 'Pemira2024TerbaikSukses',
-            'email' => 'pemira2023@gmail.com',
-            'npm' => '13082024',
-            'class' => 'Umum',
+            'nama' => 'Admin Pemira',
+            'email' => 'imamabdul8875@gmail.com',
+            'nidn' => '13082024',
             'password' => bcrypt('Pemira2024Terbaik')
             // password = Pem1ra2o23Lancar
         ]);
@@ -77,10 +59,6 @@ class DatabaseSeeder extends Seeder
         //     'password' => bcrypt('123456')
         // ]);
         
-        OpenCloseRegist::create([
-            'status' => 'open',
-        ]);
-
         // User::factory(15)->create();
 
 

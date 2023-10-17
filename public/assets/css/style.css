@@ -1515,19 +1515,19 @@ section {
 --------------------------------------------------------------*/
 #footer {
     color: #fff;
-    background: #54337e;
+    background: #28acd1;
 }
 #footer .copyright {
     margin-top: 15px;
     color: #fff;
     font-size: 16px;
-    background: #54337e;
+    background: #28acd1;
 }
 
 #footer .social-links a {
     font-size: 30px;
     /* display: inline-block; */
-    background: #54337e;
+    background: #28acd1;
     color: #fff;
     padding: 0;
     margin-right: 4px;

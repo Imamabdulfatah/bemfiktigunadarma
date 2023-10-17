@@ -4,7 +4,7 @@
 
       <div class="me-md-auto text-center text-md-start">
         <div class="copyright">
-          &copy; 2023 BEM FIKTI UG -<strong><span> Biro Pengembangan Teknologi Informasi</span></strong>|Kabinet Ruang Refleksi
+          <p class="font-footer">Copyright &copy;2023 ADIDES. All Rights Reserved</p>
         </div>
       </div>
       <div class="d-flex gap-2 social-links text-center">

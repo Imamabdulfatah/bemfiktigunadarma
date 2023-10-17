@@ -1,82 +1,92 @@
-@extends('layouts.main')
 
-@section('main')
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- ======= Breadcrumbs ======= -->
-    {{-- <section class="breadcrumbs">
-    </section> --}}
-<!-- End Breadcrumbs -->
-{{-- <div class="row justify-content-center">
-    <div class="col-md-4 ">
-        @if (session()->has('success'))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ session('success') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Login</title>
+
+    <!-- Custom fonts for this template-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" href="assets/img/adides.png" />
+    <link href="assets/admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/admin/vendor/https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="assets/admin/css/sb-admin-2.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-lg-12 col-md-9">
+
+                <div class="card o-hidden border-0 shadow-lg my-5">
+                    <div class="card-body p-0">
+                        <!-- Nested Row within Card Body -->
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-login-image" style="width: 100px; height: 370px"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+
+                                   
+                                    
+                                    <div class="text-center">
+                                        <h1 class="font-blue fs-3 mb-4 custom-text">Login Anggota</h1>
+                                    </div>
+
+                                   
+                                    <form method="post" action="/login" class="user">
+                                      @csrf
+                                        <label>Email</label>
+                                        <div class="form-group">
+                                            <input type="text" name="email" class="form-control form-control-user" id="email" aria-describedby="emailHelp" placeholder="Masukkan Email">
+                                        </div>
+                                        <label>Password</label>
+                                        <div class="form-group">
+                                            <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Masukkan password">
+                                        </div> 
+                                        <button type="submit" class="btn btn-user btn-block" style="background:  #5693C4; color: #fff">Login</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="register-text my-lg-4 mx-auto">
+                                <label>Jika belum memiliki akun silahkan lakukan <a href="/register">Registrasi</a></label>
+                            </div>
+                            <div class="register-text my-lg-4 mx-auto">
+                              <label>Jika lupa password silahkan lakukan<a href="/forgot-password">Reset Password</a></label>
+                          </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        @endif
-   <main class="form-signin"style="margin-top: 150px">
-       <h1 class="h3 mb-3 fw-normal text-center">Please login</h1>
-       <form action="/login" method="post">
-        @csrf
-       <div class="form-floating">
-         <input type="text" name="username" class="form-control @error('username') is-invalid @enderror" id="username" placeholder="Username" autofocus required>
-         <label for="username">Username</label>
-         @error('username') <div class="invalid-feedback">{{ $message }}</div> @enderror
-       </div>
-       <div class="form-floating">
-         <input type="password" name="password" class="form-control rounded-bottom " id="Password" placeholder="Password" required>
-         <label for="Password">Password</label>
-       </div>
-       <button class="w-100 btn btn-lg btn-primary mt-4" type="submit">Login</button>
-     </form>
-    <small class="d-block text-center mt-3">Belum Punya akun? <a href="/register" style="font-size: 12px">Silahkan Daftar</a></small>
-    </main>
+        </div>
     </div>
-</div> --}}
 
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-{{-- dari bootsrap sign index.html --}}
-<br><br> <br><br><br> <br> <br><br>
-<div class="row justify-content-center">
-    <div class="col-lg-5">
-    
-      @if(session()->has('success'))
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-        {{  session('success') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      @endif
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-      @if(session()->has('loginError'))
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        {{  session('loginError') }}
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-      @endif
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
 
-        <main class="form-signin">
-            <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
-            <form action="/login" method="post">
-              @csrf
-              <div class="form-floating">
-                <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="name@example.com" autofocus required value="{{ old('email') }}">
-                <label for="email">Email address</label>
-                @error('email')
-                  <div class="invalid-feedback">
-                    {{ $message }}
-                  </div>
-                @enderror
-              </div>
-              <div class="form-floating">
-                <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
-                <label for="password">Password</label>
-              </div>
-          
-              <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
-            </form>
-            <small class="d-block text-center mt-3">Not register? <a href="/register">Register Now !</a></small>
-          </main>
-    </div>
-</div>
-  
-@endsection
+</body>
+
+</html>
+
