@@ -35,15 +35,34 @@ File konfigurasi `.env` telah disiapkan untuk menyesuaikan kredensial koneksi da
 
 Jika Anda perlu mengubah kredensial atau menambahkan token API baru, Anda dapat menambahkan dan mengeditnya langsung di file `.env`.
 
+## Teknologi Website
+
+- **Framework:** Laravel 9 (PHP 8.1)
+- **Containerization:** Docker & Docker Compose
+- **Database:** MySQL 8.0
+- **Web Server:** PHP built‑in development server (exposed on port 8000)
+- **Package Manager:** Composer
+- **Version Control:** Git
+- **CI/CD (optional):** dapat di‑integrasikan dengan GitHub Actions atau GitLab CI untuk otomatisasi build & deploy.
+
+## Fitur yang Tersedia
+
+- **Manajemen Anggota BEM:** CRUD anggota dengan autentikasi Laravel Sanctum.
+- **Pengumuman & Berita:** Modul posting berita yang dapat di‑schedule.
+- **Agenda Kegiatan:** Kalender interaktif dengan filter kategori.
+- **Sistem Vote:** Voting online untuk keputusan internal BEM.
+- **Laporan Keuangan:** Dashboard ringkas menampilkan statistik pemasukan & pengeluaran.
+- **Notifikasi Email:** Menggunakan Mailhog di development untuk preview email.
+- **API Publik:** Endpoint RESTful yang dapat di‑konsumsi aplikasi mobile atau front‑end lain.
+
 ## Database
 
-Proyek ini terintegrasi dengan file `laravel_final.sql` yang berisi skema dan data default database. File ini akan otomatis diimpor saat container MySQL pertama kali dijalankan. 
-Kredensial database di dalam container adalah:
-- **Host**: `db`
-- **Port**: `3306`
-- **Database**: `laravel`
-- **Username**: `laraveluser`
-- **Password**: `laravelpassword`
+Proyek ini terintegrasi dengan file `laravel_final.sql` yang berisi skema dan data default database. File ini akan otomatis diimpor saat container MySQL pertama kali dijalankan. Kredensial database di dalam container adalah:
+- **Host:** `db`
+- **Port:** `3306`
+- **Database:** `laravel`
+- **Username:** `laraveluser`
+- **Password:** `laravelpassword`
 
 ## Perintah Bermanfaat
 
